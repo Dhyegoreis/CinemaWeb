@@ -93,6 +93,34 @@ function editarSessao(id) {
 document.getElementById('formSessao').addEventListener('submit', function(event) {
     event.preventDefault();
 
+    // Valida se filme e sala foram selecionados
+    const filmeId = document.getElementById('filmeId').value;
+    const salaId = document.getElementById('salaId').value;
+    const dataHora = document.getElementById('dataHora').value;
+    const idioma = document.getElementById('idioma').value;
+    const formato = document.getElementById('formato').value;
+
+    if (!filmeId) {
+        alert('Selecione um filme antes de salvar a sessão.');
+        return;
+    }
+    if (!salaId) {
+        alert('Selecione uma sala antes de salvar a sessão.');
+        return;
+    }
+    if (!dataHora) {
+        alert('Informe a data e hora da sessão.');
+        return;
+    }
+    if (!idioma) {
+        alert('Selecione o idioma da sessão.');
+        return;
+    }
+    if (!formato) {
+        alert('Selecione o formato da sessão.');
+        return;
+    }
+
     let sessoes = JSON.parse(localStorage.getItem('sessoes')) || [];
 
     if (idEditando !== null) {
