@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Salas</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+</head>
+<body class="bg-dark text-white">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-warning" href="index.html">🎬 CinemaWeb</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="cadastro-filmes.html">Filmes</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="cadastro-salas.html">Salas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cadastro-sessoes.html">Sessões</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sessoes.html">Programação</a></li>
+                    <li class="nav-item"><a class="nav-link" href="venda-ingressos.html">Ingressos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-4">
+        <h1 class="mb-4">Cadastro de Salas</h1>
+        <form id="formSala">
+
+            <div class="mb-3">
+                <label for="nomeSala" class="form-label">Nome da Sala</label>
+                <input type="text" class="form-control" id="nomeSala" placeholder="Ex: Sala 1">
+            </div>
+
+            <div class="mb-3">
+                <label for="capacidade" class="form-label">Capacidade</label>
+                <input type="number" class="form-control" id="capacidade" placeholder="Ex: 100" min="1">
+            </div>
+
+            <div class="mb-3">
+                <label for="tipo" class="form-label">Tipo</label>
+                <select class="form-select" id="tipo">
+                    <option value="">Selecione o tipo</option>
+                    <option value="2D">2D</option>
+                    <option value="3D">3D</option>
+                    <option value="IMAX">IMAX</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-warning">Salvar Sala</button>
+        </form>
+
+        <h2 class="mt-5 mb-3">Salas Cadastradas</h2>
+        <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Capacidade</th>
+                    <th>Tipo</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tabelaSalas">
+                <!-- JS vai inserir as linhas aqui -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/cadastro-salas.js"></script>
+</body>
+</html>

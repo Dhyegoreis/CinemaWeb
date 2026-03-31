@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programação</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+</head>
+<body class="bg-dark text-white">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-warning" href="index.html">🎬 CinemaWeb</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="cadastro-filmes.html">Filmes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cadastro-salas.html">Salas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cadastro-sessoes.html">Sessões</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="sessoes.html">Programação</a></li>
+                    <li class="nav-item"><a class="nav-link" href="venda-ingressos.html">Ingressos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-4">
+        <h1 class="mb-4">Programação</h1>
+
+        <div id="listaSessoes" class="row g-4">
+            <!-- JS vai inserir os cards aqui -->
+        </div>
+    </div>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/sessoes.js"></script>
+</body>
+</html>

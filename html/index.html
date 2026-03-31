@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CinemaWeb</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-dark text-white">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-warning" href="index.html">🎬 CinemaWeb</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="cadastro-filmes.html">Filmes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cadastro-salas.html">Salas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cadastro-sessoes.html">Sessões</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sessoes.html">Programação</a></li>
+                    <li class="nav-item"><a class="nav-link" href="venda-ingressos.html">Ingressos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="bg-black text-center py-5 border-bottom border-warning">
+        <h1 class="display-4 fw-bold text-warning">Bem-vindo ao CinemaWeb</h1>
+        <p class="lead text-secondary">Gerencie filmes, salas, sessões e ingressos</p>
+    </div>
+
+    <!-- Cards de navegação -->
+    <div class="container py-5">
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card bg-secondary text-white h-100">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">🎥 Filmes</h3>
+                        <p class="card-text">Cadastre os filmes em cartaz com título, gênero, classificação e duração.</p>
+                        <a href="cadastro-filmes.html" class="btn btn-warning">Cadastrar Filme</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card bg-secondary text-white h-100">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">🏛️ Salas</h3>
+                        <p class="card-text">Gerencie as salas do cinema com capacidade e tipo (2D, 3D, IMAX).</p>
+                        <a href="cadastro-salas.html" class="btn btn-warning">Cadastrar Sala</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card bg-secondary text-white h-100">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">🗓️ Sessões</h3>
+                        <p class="card-text">Programe sessões vinculando filmes e salas com data, hora e preço.</p>
+                        <a href="cadastro-sessoes.html" class="btn btn-warning">Cadastrar Sessão</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card bg-secondary text-white h-100">
+                    <div class="card-body text-center">
+                        <h3 class="card-title">🎟️ Ingressos</h3>
+                        <p class="card-text">Realize a venda de ingressos para as sessões disponíveis.</p>
+                        <a href="venda-ingressos.html" class="btn btn-warning">Vender Ingresso</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="card bg-secondary text-white h-100">
+                    <div class="card-body text-center">
+                        <h3 class="card-title"> 🕒 Programação</h3>
+                        <p class="card-text">Veja todas as sessões disponíveis e compre seu ingresso.</p>
+                        <a href="sessoes.html" class="btn btn-warning">Ver Programação</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

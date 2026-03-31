@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venda de Ingressos</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+</head>
+<body class="bg-dark text-white">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-warning" href="index.html">🎬 CinemaWeb</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="cadastro-filmes.html">Filmes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cadastro-salas.html">Salas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cadastro-sessoes.html">Sessões</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sessoes.html">Programação</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="venda-ingressos.html">Ingressos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-4">
+        <h1 class="mb-4">Venda de Ingressos</h1>
+        <form id="formIngresso">
+
+            <!-- select populado dinamicamente com sessões do localStorage -->
+            <div class="mb-3">
+                <label for="sessaoId" class="form-label">Sessão</label>
+                <select class="form-select" id="sessaoId">
+                    <option value="">Selecione a sessão</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="nomeCliente" class="form-label">Nome do Cliente</label>
+                <input type="text" class="form-control" id="nomeCliente" placeholder="Digite o nome completo">
+            </div>
+
+            <div class="mb-3">
+                <label for="cpf" class="form-label">CPF</label>
+                <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00">
+            </div>
+
+            <div class="mb-3">
+                <label for="assento" class="form-label">Assento</label>
+                <input type="text" class="form-control" id="assento" placeholder="Ex: A10">
+            </div>
+
+            <div class="mb-3">
+                <label for="tipoPagamento" class="form-label">Tipo de Pagamento</label>
+                <select class="form-select" id="tipoPagamento">
+                    <option value="">Selecione o pagamento</option>
+                    <option value="Cartão">Cartão</option>
+                    <option value="Pix">Pix</option>
+                    <option value="Dinheiro">Dinheiro</option>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-warning">Confirmar Venda</button>
+        </form>
+
+        <h2 class="mt-5 mb-3">Ingressos Vendidos</h2>
+        <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th>Sessão</th>
+                    <th>Cliente</th>
+                    <th>CPF</th>
+                    <th>Assento</th>
+                    <th>Pagamento</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tabelaIngressos">
+                <!-- JS vai inserir as linhas aqui -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/venda-ingressos.js"></script>
+</body>
+</html>

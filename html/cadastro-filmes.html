@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Filmes</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+</head>
+<body class="bg-dark text-white">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-warning" href="index.html">🎬 CinemaWeb</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="menuNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="cadastro-filmes.html">Filmes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cadastro-salas.html">Salas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cadastro-sessoes.html">Sessões</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sessoes.html">Programação</a></li>
+                    <li class="nav-item"><a class="nav-link" href="venda-ingressos.html">Ingressos</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container py-4">
+        <h1 class="mb-4">Cadastro de Filmes</h1>
+        <form id="formFilme">
+
+            <div class="mb-3">
+                <label for="titulo" class="form-label">Título do Filme</label>
+                <input type="text" class="form-control" id="titulo" placeholder="Digite o título do filme">
+            </div>
+
+            <!-- select: valores fixos evitam erros de digitação -->
+            <div class="mb-3">
+                <label for="genero" class="form-label">Gênero</label>
+                <select class="form-select" id="genero">
+                    <option value="">Selecione o gênero</option>
+                    <option value="Ação">Ação</option>
+                    <option value="Comédia">Comédia</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Terror">Terror</option>
+                    <option value="Ficção Científica">Ficção Científica</option>
+                    <option value="Animação">Animação</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Documentário">Documentário</option>
+                </select>
+            </div>
+
+            <!-- textarea: campo de texto longo -->
+            <div class="mb-3">
+                <label for="descricao" class="form-label">Descrição</label>
+                <textarea class="form-control" id="descricao" rows="3" placeholder="Descreva o filme"></textarea>
+            </div>
+
+            <!-- select com classificação indicativa brasileira -->
+            <div class="mb-3">
+                <label for="classificacao" class="form-label">Classificação Indicativa</label>
+                <select class="form-select" id="classificacao">
+                    <option value="">Selecione a classificação</option>
+                    <option value="Livre">Livre</option>
+                    <option value="10">10 anos</option>
+                    <option value="12">12 anos</option>
+                    <option value="14">14 anos</option>
+                    <option value="16">16 anos</option>
+                    <option value="18">18 anos</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="duracao" class="form-label">Duração (minutos)</label>
+                <input type="number" class="form-control" id="duracao" placeholder="Ex: 120" min="1">
+            </div>
+
+            <!-- input date: abre calendário nativo do browser -->
+            <div class="mb-3">
+                <label for="dataEstreia" class="form-label">Data de Estreia</label>
+                <input type="date" class="form-control" id="dataEstreia">
+            </div>
+
+            <button type="submit" class="btn btn-warning">Salvar Filme</button>
+        </form>
+
+        <h2 class="mt-5 mb-3">Filmes Cadastrados</h2>
+        <table class="table table-dark table-striped">
+            <thead>
+                <tr>
+                    <th>Título</th>
+                    <th>Gênero</th>
+                    <th>Classificação</th>
+                    <th>Duração</th>
+                    <th>Estreia</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tabelaFilmes">
+                
+            </tbody>
+        </table>
+    </div>
+
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/cadastro-filmes.js"></script>
+</body>
+</html>
