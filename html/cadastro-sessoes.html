@@ -8,7 +8,6 @@
 </head>
 <body class="bg-dark text-white">
 
-    <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-black">
         <div class="container">
             <a class="navbar-brand fw-bold text-warning" href="index.html">🎬 CinemaWeb</a>
@@ -31,7 +30,6 @@
         <h1 class="mb-4">Cadastro de Sessões</h1>
         <form id="formSessao">
 
-            <!-- select populado dinamicamente pelo JS com filmes do localStorage -->
             <div class="mb-3">
                 <label for="filmeId" class="form-label">Filme</label>
                 <select class="form-select" id="filmeId">
@@ -39,7 +37,6 @@
                 </select>
             </div>
 
-            <!-- select populado dinamicamente pelo JS com salas do localStorage -->
             <div class="mb-3">
                 <label for="salaId" class="form-label">Sala</label>
                 <select class="form-select" id="salaId">
@@ -92,7 +89,7 @@
                 </tr>
             </thead>
             <tbody id="tabelaSessoes">
-                <!-- JS vai inserir as linhas aqui -->
+
             </tbody>
         </table>
     </div>
