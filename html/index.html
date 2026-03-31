@@ -90,6 +90,59 @@
         </div>
     </div>
 
+    <div class="container pb-5">
+        <h2 class="mb-4 text-center">Resumo do Sistema</h2>
+        <div class="row g-4 text-center">
+
+            <div class="col-6 col-md-3">
+                <div class="card bg-secondary text-white h-100 py-3">
+                    <div class="card-body">
+                        <div style="font-size: 2.5rem;">📽️</div>
+                        <h2 class="fw-bold text-warning mt-2" id="totalFilmes">0</h2>
+                        <p class="mb-0">Filmes</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="card bg-secondary text-white h-100 py-3">
+                    <div class="card-body">
+                        <div style="font-size: 2.5rem;">🪑</div>
+                        <h2 class="fw-bold text-warning mt-2" id="totalSalas">0</h2>
+                        <p class="mb-0">Salas</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="card bg-secondary text-white h-100 py-3">
+                    <div class="card-body">
+                        <div style="font-size: 2.5rem;">📅</div>
+                        <h2 class="fw-bold text-warning mt-2" id="totalSessoes">0</h2>
+                        <p class="mb-0">Sessões</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="card bg-secondary text-white h-100 py-3">
+                    <div class="card-body">
+                        <div style="font-size: 2.5rem;">🎫</div>
+                        <h2 class="fw-bold text-warning mt-2" id="totalIngressos">0</h2>
+                        <p class="mb-0">Ingressos</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
     <script src="../js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('totalFilmes').textContent   = (JSON.parse(localStorage.getItem('filmes'))   || []).length;
+        document.getElementById('totalSalas').textContent    = (JSON.parse(localStorage.getItem('salas'))    || []).length;
+        document.getElementById('totalSessoes').textContent  = (JSON.parse(localStorage.getItem('sessoes'))  || []).length;
+        document.getElementById('totalIngressos').textContent = (JSON.parse(localStorage.getItem('ingressos')) || []).length;
+    </script>
 </body>
 </html>
